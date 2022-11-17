@@ -1,0 +1,25 @@
+// write a program that convert days into years, weeks and days.
+#include <stdio.h>
+int years(int n)
+{
+    return n/365;
+}
+int days(int n)
+{
+    return (n-365)%7;
+}
+int weeks(int n)
+{
+    return (n-365)/7;
+}
+
+int main() {
+    int n;
+    printf("Enter total number of days: ");
+    scanf("%d",&n);
+    printf("Years are: %d",years(n));
+    printf("\nDays are: %d",days(n));
+    printf("\nWeeks are: %d",weeks(n));
+
+    return 0;
+}
